@@ -30,6 +30,7 @@ end
 
 web_app "sf3.dsf.cc" do
   server_name "sf3.dsf.cc"
+  server_aliases []
   docroot "/www/sf3.dsf.cc"
   template "simple-site.conf.erb"
 end
