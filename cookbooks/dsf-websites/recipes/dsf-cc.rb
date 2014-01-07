@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: dsf-websites
-# Recipe:: sf3-dsf-cc
+# Recipe:: dsf-cc
 #
 # Copyright (C) 2013 Kevin Reedy
 #
@@ -19,18 +19,18 @@
 
 include_recipe "dsf-websites::default"
 
-docroot = "/www/sf3.dsf.cc"
-owner = "root"
-group = "root"
+docroot = "/www/dsf.cc"
+owner = "kreedy"
+group = "kreedy"
 
 directory docroot do
   owner owner
   group group
 end
 
-web_app "sf3.dsf.cc" do
-  server_name "sf3.dsf.cc"
+web_app "dsf.cc" do
+  server_name "dsf.cc"
   server_aliases []
-  docroot "/www/sf3.dsf.cc"
+  docroot "/www/dsf.cc"
   template "simple-site.conf.erb"
 end
